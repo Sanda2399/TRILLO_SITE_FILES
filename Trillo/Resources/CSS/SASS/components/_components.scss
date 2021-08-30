@@ -290,8 +290,6 @@
 .paragraph:not(:last-of-type) {
     margin-bottom: 2rem;
 }
-
-
 //////////////////////////////////////////////
 //  LIST
 .list {
@@ -317,7 +315,6 @@
         color: var(--color-primary);
     }
 }
-
 li {
     display: flex;
     align-items: center;
@@ -422,6 +419,18 @@ li {
         z-index: 1;
     }
 }
+//////////////////////////////////////////////
+//  CALL TO ACTION
+.cta {
+    padding: 3.5rem;
+    text-align: center;
 
+    &__book-now {
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+    }
+}
 
 
