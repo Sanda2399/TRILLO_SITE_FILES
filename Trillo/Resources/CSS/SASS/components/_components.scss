@@ -4,7 +4,6 @@
     height: 3.25rem;
     margin-left: 3rem;
 }
-
 //////////////////////////////////////////////
 // SEARCH
 .search {
@@ -64,7 +63,6 @@
         fill: var(--color-grey-dark-3);
     }
 }
-
 //////////////////////////////////////////////
 // USER NAVIGATION
 .user-nav {
@@ -129,7 +127,6 @@
 
     }
 }
-
 //////////////////////////////////////////////
 // SIDE NAVIGATION
 .sidebar {
@@ -200,12 +197,93 @@
 }
 //////////////////////////////////////////////
 // SIDE COPYRIGHT COMPONENT
-
 .copyright {
     color: var(--color-grey-light-4);
     font-size: 1.2rem;
     text-align: center;
     padding: 2.5rem;
+}
+//////////////////////////////////////////////
+//  GALLERY
+.gallery {
+    display: flex;
+    
+    &__photo {
+        width: 100%;
+        display: block;
+
+    }
+}
+//////////////////////////////////////////////
+//  HOTEL OVERVIEW
+.overview {
+    height: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1rem solid var(--color-grey-light-2);
+
+    &__right-side,
+    &__left-side {
+        display: flex;
+        height: 100%;
+    }
+
+    &__heading {
+        font-size: 2.25rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        padding: 1.5rem 3rem;
+
+    }
+
+    &__stars-section {
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon-star,
+    &__icon-location {
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: var(--color-primary);
+    }
+
+    &__icon-location {
+        margin-right: 0.5rem;
+    }
+
+    &__location {
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__rating {
+        background-color: var(--color-primary);
+        color: #fff;
+        margin-left: 3rem;
+        padding: 0 2.25rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        &-average {
+            line-height: 1.4;
+            font-size: 2.25rem;
+            font-weight: 300;
+        }
+    
+        &-count {
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+    }
 }
 
 
