@@ -4,15 +4,23 @@
     border: none;
     color: var(--color-primary);
     font-size: inherit;
-    border-bottom: 0.1rem solid currentColor;
     padding: 0.2rem;
     display: inline-block;
     background-color: transparent;
     cursor: pointer;
     transition: all 0.2s;
 
+    & span {
+        margin-left: 0.3rem;
+        transition: margin-left 0.2s;
+    }
+
     &:hover {
         color: var(--color-grey-dark-1);
+
+        span {
+            margin-left: 0.8rem;
+        }
     }
 
     &:focus {

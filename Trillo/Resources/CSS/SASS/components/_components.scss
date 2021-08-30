@@ -221,7 +221,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 0.1rem solid var(--color-grey-light-2);
+    border-bottom: var(--line);
 
     &__right-side,
     &__left-side {
@@ -285,9 +285,143 @@
         }
     }
 }
+//////////////////////////////////////////////
+//  PARAGRAPH
+.paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
 
 
+//////////////////////////////////////////////
+//  LIST
+.list {
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    list-style: none;
+    margin: 3rem 0;
+    padding: 2rem;
+    border-top: var(--line);
+    border-bottom: var(--line);
 
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        flex: 0 0 50%;
+        margin-bottom: 0.7rem;
+    }
+
+    &__item-icon {
+        margin-right: 0.5rem;
+        color: var(--color-primary);
+    }
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+//////////////////////////////////////////////
+//  RECOMMEND
+.recommend {
+    font-size: 1.3rem;
+    color: var(--color-grey-dark-3);
+    margin-top: 5.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &__count {
+
+    }
+
+    &__friends {
+
+    }
+
+    &__photo {
+        box-sizing: content-box;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border:  0.3rem solid #fff;
+
+        &:not(:last-child) {
+            margin-right: -1.5rem;
+        }
+    }
+}
+//////////////////////////////////////////////
+// REVIEWS 
+.review{
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+
+
+    &__text {
+        margin-bottom: 2.2rem;
+        z-index: 10;
+        position: relative;
+    }
+
+    &__user {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-right-side,
+        &-left-side {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__photo {
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 50%;
+        margin-right: 1.5rem;
+    }
+
+    &__user-box {
+        
+    }
+
+    &__user-name {
+        font-weight: 600;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+    &__user-date {
+        font-weight: 300;
+        font-size: 1.2rem;
+    }
+
+    &__user-rating {
+        font-size: 2rem;
+        color: var(--color-primary);
+    }
+
+    &::before {
+        content: "\201C";
+        position: absolute;
+        top: -2.75rem;
+        left: -1rem;
+        font-size: 20rem;
+        color: var(--color-grey-light-2);
+        font-family: sans-serif;
+        line-height: 1;
+        z-index: 1;
+    }
+}
 
 
 

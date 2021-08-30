@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @-webkit-keyframes pulsate {
   0% {
     transform: scale(1);
@@ -37,7 +38,9 @@
   --color-grey-dark-1: #333333;
   --color-grey-dark-2: #777777;
   --color-grey-dark-3: #999999;
-  --shadow-dark: rgba(0,0,0,.3);
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+  --shadow-light: 0 2rem 5rem rgba(0,0,0,.4);
+  --line: 0.1rem solid var(--color-grey-light-2);
 }
 
 * {
@@ -68,7 +71,7 @@ body {
   max-width: 120rem;
   margin: 8rem auto;
   background-color: var(--color-grey-light-1);
-  box-shadow: 0 2rem 6rem var(--shadow-dark);
+  box-shadow: var(--shadow-dark);
   min-height: 50rem;
 }
 
@@ -76,7 +79,7 @@ body {
   font-size: 1.4rem;
   height: 7rem;
   background-color: #fff;
-  border-bottom: 0.1rem solid var(--color-grey-light-2);
+  border-bottom: var(--line);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,23 +95,51 @@ body {
 }
 
 .hotel-view {
-  height: 80rem;
   flex: 1;
+}
+
+.detail {
+  font-size: 1.4rem;
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-2);
+  border-bottom: var(--line);
+}
+
+.description {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+}
+
+.user-reviews {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .btn-inline {
   border: none;
   color: var(--color-primary);
   font-size: inherit;
-  border-bottom: 0.1rem solid currentColor;
   padding: 0.2rem;
   display: inline-block;
   background-color: transparent;
   cursor: pointer;
   transition: all 0.2s;
 }
+.btn-inline span {
+  margin-left: 0.3rem;
+  transition: margin-left 0.2s;
+}
 .btn-inline:hover {
   color: var(--color-grey-dark-1);
+}
+.btn-inline:hover span {
+  margin-left: 0.8rem;
 }
 .btn-inline:focus {
   outline: none;
@@ -288,7 +319,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 0.1rem solid var(--color-grey-light-2);
+  border-bottom: var(--line);
 }
 .overview__right-side, .overview__left-side {
   display: flex;
@@ -337,4 +368,107 @@ body {
 .overview__rating-count {
   font-size: 1rem;
   text-transform: uppercase;
+}
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+.list {
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  list-style: none;
+  margin: 3rem 0;
+  padding: 2rem;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  display: flex;
+  flex-wrap: wrap;
+}
+.list__item {
+  flex: 0 0 50%;
+  margin-bottom: 0.7rem;
+}
+.list__item-icon {
+  margin-right: 0.5rem;
+  color: var(--color-primary);
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.recommend {
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+  margin-top: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.recommend__photo {
+  box-sizing: content-box;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: 0.3rem solid #fff;
+}
+.recommend__photo:not(:last-child) {
+  margin-right: -1.5rem;
+}
+
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+.review__text {
+  margin-bottom: 2.2rem;
+  z-index: 10;
+  position: relative;
+}
+.review__user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review__user-right-side, .review__user-left-side {
+  display: flex;
+  align-items: center;
+}
+.review__photo {
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+.review__user-name {
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.review__user-date {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+.review__user-rating {
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+.review::before {
+  content: "“";
+  position: absolute;
+  top: -2.75rem;
+  left: -1rem;
+  font-size: 20rem;
+  color: var(--color-grey-light-2);
+  font-family: sans-serif;
+  line-height: 1;
+  z-index: 1;
 }/*# sourceMappingURL=main.css.map */
